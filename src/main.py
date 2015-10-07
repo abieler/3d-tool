@@ -1,10 +1,14 @@
 from __future__ import division
 import datetime
-import spice
 from helpers import *
 import mayavi.mlab as mlab
 import numpy as np
 
+try:
+    import spiceypy as spice
+except:
+    import spice
+end
 
 r_hat_virtis = np.array([0,0,1])
 spice.furnsh("../input/spiceMetafile.tm")
