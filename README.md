@@ -8,7 +8,7 @@ most of the necessary special libraries already installed.
 
 
 Install Anaconda:
-*****************
+-----------------
 1)  download python anaconda distribution from http://continuum.io/downloads
 
 1a) execute "bash <downloaded file>" in the shell.
@@ -17,7 +17,7 @@ Install Anaconda:
 
 
 Update Anaconda:
-****************
+----------------
 1c) execute "conda update conda" in the shell.
 
 1d) execute "conda update anaconda" in the shell.
