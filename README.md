@@ -9,39 +9,35 @@ most of the necessary special libraries already installed.
 
 Install Anaconda:
 -----------------
-1)  download python anaconda distribution (version for python 2.7) from 
+download python anaconda distribution (version for python 2.7) from 
 http://continuum.io/downloads
 
-1a) execute "bash <<downloaded file>>" in the shell.
-
-1b) choose installation path of anaconda.
+execute "bash downloaded_anaconda_file" in the shell. (where downloaded_anaconda_file is
+the name of the file that was downloaded from the anaconda website.
 
 
 Update Anaconda:
 ----------------
-1c) execute "conda update conda" in the shell.
-
-1d) execute "conda update anaconda" in the shell.
-
-1e) execute "conda install mayavi" in the shell.
+execute "conda update conda" in the shell.
+execute "conda update anaconda" in the shell.
+execute "conda install mayavi" in the shell.
 
 
 Install git:
 ------------
+https://git-scm.com/
+
 
 Install SPICE / spiceypy 
 -------------------------
 in the terminal execute:
-
 git clone https://github.com/AndrewAnnex/SpiceyPy.git
 
 then change into the downloaded SpiceyPy directory and execute:
-
 python setup.py install
 
-Install 3d-tool
+Install 3d-tool:
 ---------------
 
 in the terminal execute:
-
 git clone https://github.com/abieler/3d-tool.git
