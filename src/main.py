@@ -8,7 +8,6 @@ try:
     import spiceypy as spice
 except:
     import spice
-end
 
 r_hat_virtis = np.array([0,0,1])
 spice.furnsh("../input/spiceMetafile.tm")
