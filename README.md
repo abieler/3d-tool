@@ -9,10 +9,10 @@ most of the necessary special libraries already installed.
 
 Install Anaconda:
 -----------------
-1)  download python (version for python 2.7) anaconda distribution from 
+1)  download python anaconda distribution (version for python 2.7) from 
 http://continuum.io/downloads
 
-1a) execute "bash downloaded file" in the shell.
+1a) execute "bash <<downloaded file>>" in the shell.
 
 1b) choose installation path of anaconda.
 
@@ -26,20 +26,18 @@ Update Anaconda:
 1e) execute "conda install mayavi" in the shell.
 
 
-Install SPICE/ pySPICE
---
-pySPICE in an unofficial wrapper for the NAIF cspice toolkit
+Install git:
+------------
 
-2a) download cspice toolkit from:
-http://naif.jpl.nasa.gov/naif/toolkit_C.html.
+Install SPICE / spiceypy 
+-------------------------
+in the terminal execute:
 
-2b) download pySpice from
-https://github.com/rca/PySPICE.
+git clone https://github.com/AndrewAnnex/SpiceyPy.git
 
-2c) extract both downloaded packages and move the extracted cspice
-folder into the PySPICE-master directory.
+Install 3d-tool
+---------------
 
-2d) from inside PySPICE-master execute the following two commands from
-the shell:
-python setup.py build_ext
-python setup.py install
+in the terminal execute:
+
+git clone https://github.com/abieler/3d-tool.git
