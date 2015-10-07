@@ -12,7 +12,7 @@ Install Anaconda:
 1)  download python (version for python 2.7) anaconda distribution from 
 http://continuum.io/downloads
 
-1a) execute "bash <downloaded file>" in the shell.
+1a) execute "bash downloaded file" in the shell.
 
 1b) choose installation path of anaconda.
 
