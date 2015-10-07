@@ -23,14 +23,7 @@ Update Anaconda:
 
 1d) execute "conda update anaconda" in the shell.
 
-1e) execute "conda install mpi4py" in the shell.
-
-1f) execute "conda install bokeh" in the shell.
-
-1g) modify your PATH variable such that python is called
-from /YourPathTo/anaconda/bin/python
-(newer anaconda distros can do this automatically for you
-during the install process)
+1e) execute "conda install mayavi" in the shell.
 
 
 Install SPICE/ pySPICE
