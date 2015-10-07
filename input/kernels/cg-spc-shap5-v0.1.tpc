@@ -1,0 +1,11 @@
+KPL/PCK
+
+     \begindata
+
+        BODY1000012_POLE_RA       = (   69.361               0.0              0.0 )
+        BODY1000012_POLE_DEC      = (   63.990               0.0              0.0 )
+        BODY1000012_PM            = (   117.864           696.543335108715    0.0 )
+
+     \begintext
+
+        
