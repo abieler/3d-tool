@@ -33,7 +33,7 @@ during the install process)
 
 
 Install SPICE/ pySPICE
-***********************
+--
 pySPICE in an unofficial wrapper for the NAIF cspice toolkit
 
 2a) download cspice toolkit from:
