@@ -9,7 +9,8 @@ most of the necessary special libraries already installed.
 
 Install Anaconda:
 -----------------
-1)  download python anaconda distribution from http://continuum.io/downloads
+1)  download python (version for python 2.7) anaconda distribution from 
+http://continuum.io/downloads
 
 1a) execute "bash <downloaded file>" in the shell.
 
