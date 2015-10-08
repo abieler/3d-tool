@@ -33,13 +33,16 @@ https://git-scm.com/
 Install SPICE / spiceypy 
 -------------------------
 in the terminal execute:
+
 **git clone https://github.com/AndrewAnnex/SpiceyPy.git**
 
 then change into the downloaded SpiceyPy directory and execute:
+
 **python setup.py install**
 
 Install 3d-tool:
 ---------------
 
 in the terminal execute:
+
 **git clone https://github.com/abieler/3d-tool.git**
