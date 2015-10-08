@@ -18,9 +18,9 @@ the name of the file that was downloaded from the anaconda website.
 
 Update Anaconda:
 ----------------
-execute "conda update conda" in the shell.
-execute "conda update anaconda" in the shell.
-execute "conda install mayavi" in the shell.
+execute "**conda update conda**" in the shell.
+execute "**conda update anaconda**" in the shell.
+execute "**conda install mayavi**" in the shell.
 
 
 Install git:
@@ -31,13 +31,13 @@ https://git-scm.com/
 Install SPICE / spiceypy 
 -------------------------
 in the terminal execute:
-git clone https://github.com/AndrewAnnex/SpiceyPy.git
+**git clone https://github.com/AndrewAnnex/SpiceyPy.git**
 
 then change into the downloaded SpiceyPy directory and execute:
-python setup.py install
+**python setup.py install**
 
 Install 3d-tool:
 ---------------
 
 in the terminal execute:
-git clone https://github.com/abieler/3d-tool.git
+**git clone https://github.com/abieler/3d-tool.git**
