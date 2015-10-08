@@ -19,7 +19,9 @@ the name of the file that was downloaded from the anaconda website.
 Update Anaconda:
 ----------------
 execute "**conda update conda**" in the shell.
+
 execute "**conda update anaconda**" in the shell.
+
 execute "**conda install mayavi**" in the shell.
 
 
