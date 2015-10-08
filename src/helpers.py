@@ -23,21 +23,8 @@ def calculate_surface_normals(vertexes, triangles):
         n_hat[ii] = n_hat[ii] / np.sqrt(((n_hat[ii]**2).sum()))
 
     return n_hat
-
 def load_shape_model_vtk(fileName, fileType='vtk'):
-    '''
-    load_shape_model_vtk(fileName)
-
-
-    read vtk mesh file and return:
-    * nTriangles: number of triangles in shape model.
-    * nodeCoords: (x,y,z) of every node.
-    * triIndices: node indices building a tirangle (connectivity list)
-    * triangles : coordinates of the three nodes forming the triangles
-    * n_hat     : surface normals of triangles
-    * p         : center of gravity of each triangle
-    * triArea   : surface area of triangle
-    '''
+    
     if fileName.split('.')[-1] =='ply':
       fileType = 'ply'
 
@@ -79,7 +66,6 @@ def load_shape_model_vtk(fileName, fileType='vtk'):
     triIndices = np.array([[i,j,k] for i,j,k in zip(triIndices[:,1], triIndices[:,2], triIndices[:,3])], dtype=int)
     triangles = np.array([[nodeCoords[iSet[0]], nodeCoords[iSet[1]], nodeCoords[iSet[2]]] for iSet in triIndices], dtype=float)
 
-
     n_hat = calculate_surface_normals(nodeCoords, triIndices)
     n_hat = np.array(n_hat, dtype=float)
 
@@ -88,7 +74,20 @@ def load_shape_model_vtk(fileName, fileType='vtk'):
     # calculate surface area of each triangle
     triArea = calculate_triangle_area(triangles)
 
-    return nTriangles, nodeCoords, triIndices, triangles, n_hat, p, triArea
+    return nTriangles, nodeCoords, n_hat, triIndices
+
+
+def plt_coords(a,b, fStretch=1):
+
+    coords = np.zeros((2,3))
+    coords[0,:] = a
+    coords[1,:] = a+b
+
+    xPlt = coords[:,0] * fStretch
+    yPlt = coords[:,1] * fStretch
+    zPlt = coords[:,2] * fStretch
+
+    return xPlt, yPlt, zPlt
 
 
 def angle_between(v1, v2):
