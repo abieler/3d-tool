@@ -5,16 +5,13 @@ from virtis import pointing_vectors
 import mayavi.mlab as mlab
 import numpy as np
 
-<<<<<<< HEAD
 # load spice kernels
-=======
 try:
     import spiceypy as spice
 except:
     import spice
 
 r_hat_virtis = np.array([0,0,1])
->>>>>>> e3265d6e1a7635bf3984affe65ca2234b19c671f
 spice.furnsh("../input/spiceMetafile.tm")
 
 # t = time for which the pointing is calculated
