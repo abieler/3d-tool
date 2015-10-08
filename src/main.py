@@ -55,7 +55,6 @@ xVIR_plt, yVIR_plt, zVIR_plt = plt_coords(rSC_hat, rVirtis_hat*fStretch)
 # load comet shape model and compute solar incident angles
 fileName = '../input/shapeModel.ply'
 fileName = '../input/SHAP5_stefano.ply'
-#nTriangles, nodeCoords, triIndices, triangles, n_hat, triCenters, triAreas = load_shape_model_vtk(fileName)
 nTriangles, nodeCoords, surfaceNormals, triIndices = load_shape_model_vtk(fileName)
 x = nodeCoords[:,0]
 y = nodeCoords[:,1]
