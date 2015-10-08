@@ -24,7 +24,7 @@ def calculate_surface_normals(vertexes, triangles):
 
     return n_hat
 def load_shape_model_vtk(fileName, fileType='vtk'):
-    
+
     if fileName.split('.')[-1] =='ply':
       fileType = 'ply'
 
@@ -83,9 +83,9 @@ def plt_coords(a,b, fStretch=1):
     coords[0,:] = a
     coords[1,:] = a+b
 
-    xPlt = coords[:,0] * fStretch
-    yPlt = coords[:,1] * fStretch
-    zPlt = coords[:,2] * fStretch
+    xPlt = coords[:,0]
+    yPlt = coords[:,1]
+    zPlt = coords[:,2]
 
     return xPlt, yPlt, zPlt
 
