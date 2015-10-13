@@ -2,8 +2,11 @@ from __future__ import division
 import datetime
 from helpers import *
 from virtis import pointing_vectors
-import mayavi.mlab as mlab
 import numpy as np
+
+import mayavi.mlab as mlab
+from mayavi import mlab
+mlab.options.backend = 'envisage'
 
 # load spice kernels
 try:
