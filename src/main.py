@@ -28,8 +28,8 @@ et = spice.str2et(timeStamp)
 rVirtis_hat = np.array([0,0,1])
 R = spice.pxform('ROS_OSIRIS_NAC','67P/C-G_CK', et)
 rVirtis_hat = np.dot(R, rVirtis_hat)
-nPixelsX = 5
-nPixelsY = 5
+nPixelsX = 3
+nPixelsY = 3
 pVectors = pointing_vectors(nPixelsX, nPixelsY)
 
 ################################################################################
