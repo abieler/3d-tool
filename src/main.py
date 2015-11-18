@@ -28,8 +28,8 @@ et = spice.str2et(timeStamp)
 rVirtis_hat = np.array([0,0,1])
 R = spice.pxform('ROS_OSIRIS_NAC','67P/C-G_CK', et)
 rVirtis_hat = np.dot(R, rVirtis_hat)
-nPixelsX = 3
-nPixelsY = 3
+nPixelsX = 5
+nPixelsY = 5
 pVectors = pointing_vectors(nPixelsX, nPixelsY)
 
 ################################################################################
@@ -39,12 +39,16 @@ observer = 'CHURYUMOV-GERASIMENKO'
 corr = 'NONE'
 frame = '67P/C-G_CK'
 rSC, lt = spice.spkpos('ROSETTA', et, frame, corr, observer)
-rSC = np.array(rSC, dtype=float)*m2km
+rSC = np.array(rSC, dtype=float) * m2km
 rSC_hat = rSC / np.linalg.norm(rSC)
 
 rSun, lt = spice.spkpos("SUN", et, frame, corr, observer)
 rSun = np.array(rSun, dtype=float)
 rSun_hat = rSun / np.linalg.norm(rSun)
+
+rCG, lt = spice.spkpos("CHURYUMOV-GERASIMENKO", et, frame, corr, "ROSETTA")
+rCG = np.array(rCG, dtype=float) * m2km
+rCG_hat = rCG / np.linalg.norm(rCG)
 
 ################################################################################
 # compute plotting coordinates
@@ -71,6 +75,7 @@ for i in range(nTriangles):
 # plot the results
 # s and surf represent the nucleus shape model
 # plot3d plots lines
+
 s = mlab.pipeline.triangular_mesh_source(x, y, z, triIndices)
 s.data.cell_data.scalars = np.cos(phaseAngle)
 surf = mlab.pipeline.surface(s)
@@ -80,8 +85,14 @@ surf.contour.maximum_contour = 1.0
 surf.module_manager.scalar_lut_manager.data_range = (0,1)
 mlab.plot3d(xSun_plt, ySun_plt, zSun_plt, tube_radius=fStretch/1000, color=(1,1,0))
 mlab.plot3d(xSC_plt, ySC_plt, zSC_plt, tube_radius=fStretch/1000, color=(0,0,1))
+
 for i in range(nPixelsX):
     for j in range(nPixelsY):
-        xVIR_plt, yVIR_plt, zVIR_plt = plt_coords(rSC, np.dot(R, 1.1*fStretch*pVectors[:,i,j]))
+        p = np.dot(R, pVectors[:,i,j])
+        p_tan = np.dot(rCG, p) * p + rSC
+
+        xVIR_plt, yVIR_plt, zVIR_plt = plt_coords(rSC,  1.1*fStretch*p)
         mlab.plot3d(xVIR_plt, yVIR_plt, zVIR_plt, tube_radius=fStretch/5000, color=(0,0,0))
+        mlab.points3d([p_tan[0]], [p_tan[1]], [p_tan[2]], [10], scale_factor=15,
+                      color=(1,0.7,0.1))
 mlab.show()
